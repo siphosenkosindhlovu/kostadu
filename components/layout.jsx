@@ -1,12 +1,16 @@
 import {Box} from 'rebass'
 export default function Layout({children, ...props}) {
   return (
-    <Box {...props} sx={{
-      maxWidth: '1640px',
-      margin: 'auto',
-      px: [6, 0]
-    }}>
+    <>
+      <Head>
+        <title>Create Next App</title>
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="stylesheet" href="/fonts/stylesheet.css" />
+      </Head>
+      <NavBar/>
+      <main>
       {children}
-    </Box>
+      </main>
+    </>
   );
 }
