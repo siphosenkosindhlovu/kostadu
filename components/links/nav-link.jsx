@@ -5,7 +5,10 @@ export default function NavLink({ href, children, ...props }) {
   return (
     <Link href={href} passHref>
       <BaseLink
-      {...props}
+        variant="navlink"
+        my={2}
+        ml={0}
+        {...props}
         sx={{
           textTransform: 'uppercase',
           mx: 3,
@@ -18,7 +21,7 @@ export default function NavLink({ href, children, ...props }) {
             width: '0%',
             height: '4px',
             bg: 'blue',
-            transition: 'all 0.3s'
+            transition: 'all 0.3s',
           },
           '&:hover': {
             '&:after': {

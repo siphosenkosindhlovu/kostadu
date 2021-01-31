@@ -20,18 +20,18 @@ export default function NavBar() {
         justifyContent="space-between"
         px={[0, null, null, null, 8]}
         py={[6, null, null, null, 8]}
-        sx={{ flexDirection: ['column', null, null, 'row'] }}
+        sx={{ flexDirection: ['column', null, 'row'] }}
       >
         <Flex
           alignItems="center"
           sx={{ flexDirection: ['row'], justifyContent: 'space-between' }}
         >
           <Flex alignItems="center">
-            <Avatar src="/images/avatar.png" mr={[3, null, null, null, 5]} />
+            <Avatar src="/images/avatar.png" mr={[3, null, 5]} />
             <Text
               as="span"
               fontFamily="heading"
-              fontSize={[5, null, null, 7, 8]}
+              fontSize={[5, null, 7, 8]}
               sx={{ whiteSpace: 'nowrap' }}
             >
               Kosta{' '}
@@ -40,7 +40,7 @@ export default function NavBar() {
               </Text>
             </Text>
           </Flex>
-          <Button sx={{display: [null, null, null, 'none']}} onClick={() => setIsOpen(!isOpen)}>Menu</Button>
+          <Button sx={{display: [null, null, 'none']}} onClick={() => setIsOpen(!isOpen)}>Menu</Button>
         </Flex>
         <Box
           as="navbar"
@@ -49,10 +49,10 @@ export default function NavBar() {
           pt={[9, 0]}
           mt={[9, 0]}
           sx={{
-            display: [isOpen ? 'flex' : 'none', null, null, 'flex'],
-            width: ['100vw', null, null, 'auto'],
-            height: ['100vh', null, null, 'auto'],
-            position: ['fixed', null, null, 'static'],
+            display: [isOpen ? 'flex' : 'none', null, 'flex'],
+            width: ['100vw', null, 'auto'],
+            height: ['100vh', null, 'auto'],
+            position: ['fixed', null, 'static'],
             top: 0,
             left: 0,
             px: 6,
@@ -62,9 +62,9 @@ export default function NavBar() {
             <NavLink
               key={i}
               href={navItem.href}
-              fontSize={[8, null, null, 4]}
-              pb={2}
-              ml={0}
+              fontSize={[8, null, 4]}
+              mr={0}
+              ml={[0, null, 5]}
             >
               {navItem.title}
             </NavLink>
