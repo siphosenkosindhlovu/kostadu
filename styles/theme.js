@@ -32,16 +32,42 @@ export default {
     light: '#E3E3E3',
     background: 'white',
   },
-  text: 'dark',
   background: 'white',
   space: [0, 5, 15, 20, 25, 30, 35, 50, 80, 100],
   sizes: [52, 80],
-  variants: {
+  text: {
+    display: { fontSize: [9, null, null, null, 8] },
     heading: {
       fontFamily: 'heading',
       fontSize: [8, null, null, null, 9],
     },
-    display: { fontSize: [9, null, null, null, 8] },
+    heading_2: {
+      fontFamily: 'heading',
+      fontSize: [6, null, null, null, 8],
+    },
+    heading_2: {
+      fontFamily: 'body',
+      fontSize: [6, null, null, null, 8],
+    },
+    subheading: {
+      fontFamily: 'body',
+      fontSize: [2, null, null, null, 4],
+    },
+  },
+  buttons: {
+    primary: {
+      height: '50px',
+      bg: 'white',
+      color: 'blue',
+      borderRadius: '999px',
+      borderColor: 'blue',
+      borderWidth: '2px',
+      borderStyle: 'solid',
+      '&:hover' : {
+        color: 'white',
+        bg: 'blue'
+      }
+    },
   },
   styles: {},
 };

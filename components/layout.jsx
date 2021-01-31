@@ -1,5 +1,7 @@
-import {Box} from 'rebass'
-export default function Layout({children, ...props}) {
+import { Box } from 'rebass';
+import Head from 'next/head';
+import NavBar from '../components/navbar'
+export default function Layout({ children, ...props }) {
   return (
     <>
       <Head>
@@ -7,10 +9,8 @@ export default function Layout({children, ...props}) {
         <link rel="icon" href="/favicon.ico" />
         <link rel="stylesheet" href="/fonts/stylesheet.css" />
       </Head>
-      <NavBar/>
-      <main>
-      {children}
-      </main>
+      <NavBar />
+      <main>{children}</main>
     </>
   );
 }

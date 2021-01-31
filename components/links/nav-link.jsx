@@ -3,8 +3,9 @@ import BaseLink from './base-link';
 
 export default function NavLink({ href, children, ...props }) {
   return (
-    <Link {...props} href={href} passHref>
+    <Link href={href} passHref>
       <BaseLink
+      {...props}
         sx={{
           textTransform: 'uppercase',
           mx: 3,
