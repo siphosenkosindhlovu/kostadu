@@ -33,7 +33,7 @@ export default {
     background: 'white',
   },
   background: 'white',
-  space: [0, 5, 15, 20, 25, 30, 35, 50, 75, 80, 100, 150],
+  space: [0, 5, 10, 15, 20, 25, 30, 35, 50, 75, 80, 100, 150],
   sizes: [52, 80],
   text: {
     display: { fontSize: [9, null, null, null, 8] },
@@ -45,7 +45,7 @@ export default {
       fontFamily: 'heading',
       fontSize: [6, null, null, 8],
     },
-    heading_2: {
+    heading_2_alt: {
       fontFamily: 'body',
       fontSize: [6, null, null, 8],
     },
@@ -74,10 +74,16 @@ export default {
     },
   },
   variants: {
+    card: {
+      p: 6
+    },
     grid: {
       display: [null, 'grid'],
       gridTemplateColumns: 'repeat(10, 1fr)',
       gridGap: 2,
+    },
+    narrow: {
+      maxWidth: ['100%', '80%']
     },
     navlink: {
       fontSize: 4,

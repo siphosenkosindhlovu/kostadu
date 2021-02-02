@@ -18,8 +18,8 @@ export default function NavBar() {
       <Flex
         as="header"
         justifyContent="space-between"
-        px={[0, null, null, null, 8]}
-        py={[6, null, null, null, 8]}
+        px={[0, null, null, null, 9]}
+        py={[7, null, null, null, 9]}
         sx={{ flexDirection: ['column', null, 'row'] }}
       >
         <Flex
@@ -27,7 +27,7 @@ export default function NavBar() {
           sx={{ flexDirection: ['row'], justifyContent: 'space-between' }}
         >
           <Flex alignItems="center">
-            <Avatar src="/images/avatar.png" mr={[3, null, 5]} />
+            <Avatar src="/images/avatar.png" mr={[4, null, 6]} />
             <Text
               as="span"
               fontFamily="heading"
@@ -46,8 +46,8 @@ export default function NavBar() {
           as="navbar"
           flexDirection={['column', null, 'row']}
           alignItems={['flex-start', null, 'center']}
-          pt={[9, 0]}
-          mt={[9, 0]}
+          pt={[10, 0]}
+          mt={[10, 0]}
           sx={{
             display: [isOpen ? 'flex' : 'none', null, 'flex'],
             width: ['100vw', null, 'auto'],
@@ -64,7 +64,7 @@ export default function NavBar() {
               href={navItem.href}
               fontSize={[8, null, 4]}
               mr={0}
-              ml={[0, null, 5]}
+              ml={[0, null, 6]}
             >
               {navItem.title}
             </NavLink>
