@@ -10,7 +10,7 @@ export default function Publication() {
     <Layout>
       <Container as="section" pt={9}>
         <Main withAside>
-          <Heading color="blue" mb={[8, null, 10]}>
+          <Heading mb={[8, null, 10]}>
             Find my presence
             <br /> across the web
           </Heading>
@@ -18,8 +18,8 @@ export default function Publication() {
         <Aside></Aside>
       </Container>
       <Box bg="light">
-        <Container py={['120px', null, null, '200px']}>
-          <Box
+        <Container  py={['120px', null, null, null, '200px']}>
+          <Main
             sx={{
               display: 'grid',
               columnGap: 3,
@@ -47,7 +47,7 @@ export default function Publication() {
                 </Text>
               </Card>
             ))}
-          </Box>
+          </Main>
         </Container>
       </Box>
     </Layout>

@@ -178,7 +178,7 @@ export default function Biograpgy() {
         </Container>
       </Box>
       <Box bg="lightBlue">
-        <Container pt={[10, null, 10]} pb={[5]}>
+        <Container pt={10} pb={5}>
           <Main>
             {education.map(({ img, years, location, programme, name }, i) => (
               <Box
