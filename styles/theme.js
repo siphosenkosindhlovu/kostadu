@@ -49,7 +49,7 @@ export default {
     },
     heading_3: {
       fontFamily: 'heading',
-      fontSize: 4
+      fontSize: 4,
     },
     heading_2_alt: {
       fontFamily: 'body',
@@ -91,7 +91,7 @@ export default {
       },
     },
     navlink: {
-      bg:'transparent',
+      bg: 'transparent',
       color: 'dark',
       p: 0,
       fontFamily: 'body',
@@ -112,6 +112,15 @@ export default {
           width: '100%',
         },
       },
+    },
+    interaction: {
+      boxShadow: '10px 15px 20px #00000029',
+      border: 'none',
+      borderRadius: '999px',
+      color: 'blue',
+      '&:disabled' :{
+        color: 'gray'
+      }
     },
   },
   forms: {

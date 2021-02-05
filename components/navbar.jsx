@@ -4,7 +4,7 @@ import Container from '../components/container';
 import Avatar from './avatar';
 import { useState } from 'react';
 export default function NavBar() {
-  const [isOpen ,setIsOpen]  = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
   const navItems = [
     { href: '/biograpgy', title: 'BIOGRAPGY' },
     { href: '/projects', title: 'PROJECTS' },
@@ -19,19 +19,19 @@ export default function NavBar() {
         as="header"
         justifyContent="space-between"
         px={[0, null, null, null, 9]}
-        py={[7, null, null, null, 9]}
+        py={[6, null, null, null, 9]}
         sx={{ flexDirection: ['column', null, 'row'] }}
       >
         <Flex
           alignItems="center"
           sx={{ flexDirection: ['row'], justifyContent: 'space-between' }}
         >
-          <Flex alignItems="center">
-            <Avatar src="/images/avatar.png" mr={[4, null, 6]} />
+          <Flex as="a" href="/" variant="link" alignItems="center">
+            <Avatar src="/images/avatar.png" mr={[4, null, null, null, 6]} />
             <Text
               as="span"
               fontFamily="heading"
-              fontSize={[5, null, 7, 8]}
+              fontSize={[5, null, null, 7, 8]}
               sx={{ whiteSpace: 'nowrap' }}
             >
               Kosta{' '}
@@ -40,7 +40,12 @@ export default function NavBar() {
               </Text>
             </Text>
           </Flex>
-          <Button sx={{display: [null, null, 'none']}} onClick={() => setIsOpen(!isOpen)}>Menu</Button>
+          <Button
+            sx={{ display: [null, null, 'none'] }}
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            Menu
+          </Button>
         </Flex>
         <Box
           as="navbar"

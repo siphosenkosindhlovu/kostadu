@@ -5,8 +5,8 @@ export default function Avatar(props){
     <Image
       {...props}
       sx={{
-        width: [52, null, null, 80],
-        height: [52, null, null, 80],
+        width: [52, null, null, null, 80],
+        height: [52, null, null, null, 80],
         borderRadius: '9999px'
       }}
     />

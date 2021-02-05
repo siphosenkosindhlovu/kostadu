@@ -78,7 +78,39 @@ export default function Publication() {
                       <Text>Zoom</Text>
                     </Box>
                     <Flex alignItems="flex-end">
-                      <Button as={Link} href="#" mb={-2}>
+                      <Button as={Link} href="https://calendar.x.ai/kostadu/virtual15min" mb={-2}>
+                        Go
+                      </Button>
+                    </Flex>
+                  </Flex>
+                </Card>
+                <Card bg="fadedBlue" color="white" mb="6">
+                  <Heading variant="heading_2" mb={[6, null, null, null, 8]}>
+                    Zoom call 45 min
+                  </Heading>
+                  <Flex justifyContent="space-between">
+                    <Box>
+                      <Text mb={[3, null, null, null, 4]}>15 minutes</Text>
+                      <Text>Zoom</Text>
+                    </Box>
+                    <Flex alignItems="flex-end">
+                      <Button as={Link} href="https://calendar.x.ai/kostadu/virtual45min" mb={-2}>
+                        Go
+                      </Button>
+                    </Flex>
+                  </Flex>
+                </Card>
+                <Card bg="fadedBlue" color="white" mb="6">
+                  <Heading variant="heading_2" mb={[6, null, null, null, 8]}>
+                    Zoom call 1 hour
+                  </Heading>
+                  <Flex justifyContent="space-between">
+                    <Box>
+                      <Text mb={[3, null, null, null, 4]}>15 minutes</Text>
+                      <Text>Zoom</Text>
+                    </Box>
+                    <Flex alignItems="flex-end">
+                      <Button as={Link} href="https://calendar.x.ai/kostadu/virtual1h" mb={-2}>
                         Go
                       </Button>
                     </Flex>
