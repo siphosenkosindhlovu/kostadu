@@ -1,5 +1,5 @@
 export default {
-  breakpoints: ['768px', '1024px', '1400px'],
+  breakpoints: ['768px', '1024px', '1200px', '1440px'],
   fontSizes: [
     '14px',
     '15px',
@@ -12,6 +12,7 @@ export default {
     '35px',
     '50px',
     '70px',
+    '75px',
     '100px',
   ],
   fonts: {
@@ -52,6 +53,14 @@ export default {
     subheading: {
       fontFamily: 'body',
       fontSize: 4,
+      mb: [5, null, 8]
+    },
+    subheadingLight: {
+      mb: [5, null, 8],
+      fontFamily: 'body',
+      fontSize: 4,
+      color: 'dark',
+      opacity: 0.3
     },
     body: {
       lineHeight: 1.5,
@@ -75,7 +84,8 @@ export default {
   },
   variants: {
     card: {
-      p: 6
+      p: 6,
+      bg: 'white',
     },
     grid: {
       display: [null, 'grid'],
@@ -87,7 +97,12 @@ export default {
     },
     navlink: {
       fontSize: 4,
-    }
+    },
+    link: {
+      fontSize: 2,
+      color: 'dark',
+      textDecoration: 'none'
+    } 
   },
   styles: {},
 };

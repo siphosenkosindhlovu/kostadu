@@ -20,9 +20,9 @@ const Contact = (props) => (
       <Heading
         as="a"
         href="#"
-        mb={[8, null, 10]}
+        mb={[8, null, null, null, 10]}
         variant="heading"
-        fontSize={[6, 10]}
+        fontSize={[6, null, null, null, 10]}
         sx={{ display: 'block', color: 'white', textDecoration: 'none' }}
       >
         YouTube
@@ -30,9 +30,9 @@ const Contact = (props) => (
       <Heading
         as="a"
         href="#"
-        mb={[8, null, 10]}
+        mb={[8, null, null, null, 10]}
         variant="heading"
-        fontSize={[6, 10]}
+        fontSize={[6, null, null, null, 10]}
         sx={{ display: 'block', color: 'white', textDecoration: 'none' }}
       >
         Linkedin
@@ -40,9 +40,9 @@ const Contact = (props) => (
       <Heading
         as="a"
         href="#"
-        mb={[8, null, 10]}
+        mb={[8, null, null, null, 10]}
         variant="heading"
-        fontSize={[6, 10]}
+        fontSize={[6, null, null, null, 10]}
         sx={{ display: 'block', color: 'white', textDecoration: 'none' }}
       >
         Telegram
@@ -105,7 +105,7 @@ export default function Home() {
               pb: 8,
             }}
           >
-            <Heading color="blue" sx={{ transform: 'translateY(-50%)' }}>
+            <Heading as="h2" color="blue" sx={{ transform: 'translateY(-50%)' }}>
               I launch businesses and projects.
             </Heading>
             <Text as="p" variant="body" pb={8}>
@@ -201,11 +201,7 @@ export default function Home() {
                 pl: [null, 2],
               }}
             >
-              <Box
-                sx={{
-                  backgroundColor: '#08243B',
-                }}
-              >
+              <Box>
                 <Image src="images/slide_03.png"></Image>
                 <Box
                   bg="white"
@@ -306,10 +302,10 @@ export default function Home() {
             py={[10, null, 11]}
           >
             <Box width={['75%', null, '100%', '70%']}>
-              <Heading mb={8} pb={[0, null, 2]} fontSize={[8, 10]} color="blue">
+              <Heading mb={8} pb={[0, null, null, null, 2]} fontSize={[8, 10]} color="blue">
                 Do you think, I can do more for you?
               </Heading>
-              <Text mb={[8, null, 11]} fontSize={[6, 9]}>
+              <Text mb={[8, null, null, null, 11]} fontSize={[6, 9]}>
                 Let’s talk. I’ll show you how to launch your own business and
                 promise to give the best advice.
               </Text>
