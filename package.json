@@ -16,6 +16,7 @@
     "next": "10.0.5",
     "react": "17.0.1",
     "react-dom": "17.0.1",
+    "react-motion": "^0.5.2",
     "react-slick": "^0.28.0",
     "rebass": "^4.0.7",
     "slick-carousel": "^1.8.1",

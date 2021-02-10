@@ -1,7 +1,7 @@
 import { Box } from 'rebass';
 import Head from 'next/head';
-import NavBar from './navbar'
-import Footer from './footer'
+import NavBar from './navbar';
+import Footer from './footer';
 export default function Layout({ children, ...props }) {
   return (
     <>
@@ -11,8 +11,10 @@ export default function Layout({ children, ...props }) {
         <link rel="stylesheet" href="/fonts/stylesheet.css" />
       </Head>
       <NavBar />
-      <main>{children}</main>
-      <Footer/>
+      <Box as="main" {...props}>
+        {children}
+        <Footer />
+      </Box>
     </>
   );
 }

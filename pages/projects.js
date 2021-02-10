@@ -6,7 +6,30 @@ import projects from '../lib/projects';
 
 export default function Projects() {
   return (
-    <Layout>
+    <Layout sx={{
+      position: ['absolute', null, 'static'],
+      top: '0',
+      right: '0',
+      width: '100%',
+    }}>
+      <Box
+        sx={{
+          position: [null, null, 'absolute'],
+          top: '0',
+          right: '0',
+          width: '100%',
+          zIndex: -1,
+        }}
+      >
+        <picture>
+          <source media="(min-width: 768px)" srcset="images/hot-air.svg" />
+          <Image
+            src="images/hot-air-mobile.svg"
+            alt="Hot Air Baloon"
+            width="100%"
+          ></Image>
+        </picture>
+      </Box>
       <Container as="section" pt={9}>
         <Main>
           <Heading color="blue" mb={[8, null, 10]}>
@@ -36,26 +59,27 @@ export default function Projects() {
                     {project.desc}
                   </Text>
                   <Flex mt="auto">
-                      {project.links && (
-                        <Link
-                          href={'https://' + project.links}
-                          mr={3}
-                          sx={{ display: 'flex', alignItems: 'center' }}
-                        >
-                          <Image src="images/link.svg" alt="Link" mr="1" />
-                          {project.links}
-                        </Link>
-                      )}
-                      {project.presentation && (
-                        <Link
-                          href={'https://' + project.presentation}
-                          mr={3}
-                          sx={{ display: 'flex', alignItems: 'center' }}
-                        >
-                          <Image src="images/link.svg" alt="Link" mr="1" /> Presentation
-                        </Link>
-                      )}
-                    </Flex>
+                    {project.links && (
+                      <Link
+                        href={'https://' + project.links}
+                        mr={3}
+                        sx={{ display: 'flex', alignItems: 'center' }}
+                      >
+                        <Image src="images/link.svg" alt="Link" mr="1" />
+                        {project.links}
+                      </Link>
+                    )}
+                    {project.presentation && (
+                      <Link
+                        href={'https://' + project.presentation}
+                        mr={3}
+                        sx={{ display: 'flex', alignItems: 'center' }}
+                      >
+                        <Image src="images/link.svg" alt="Link" mr="1" />{' '}
+                        Presentation
+                      </Link>
+                    )}
+                  </Flex>
                 </Flex>
                 <Box
                   sx={{
@@ -80,14 +104,15 @@ export default function Projects() {
               <Text
                 variant="heading"
                 color="blue"
-                fontSize={[11, null, null, null, 12]}
+                fontSize={[11, null, null, null, 11, 12]}
                 mt="auto"
                 sx={{
-                  position: [null, null, 'absolute'],
+                  position: [null, null, null, 'absolute'],
                   left: [
                     null,
                     null,
                     'calc(100% + 30px)',
+                    null,
                     null,
                     'calc(100% + 85px)',
                   ],
@@ -135,7 +160,8 @@ export default function Projects() {
                           mr={3}
                           sx={{ display: 'flex', alignItems: 'center' }}
                         >
-                          <Image src="images/link.svg" alt="Link" mr="1" /> Presentation
+                          <Image src="images/link.svg" alt="Link" mr="1" />{' '}
+                          Presentation
                         </Link>
                       )}
                     </Flex>

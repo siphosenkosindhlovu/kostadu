@@ -5,8 +5,8 @@ export default function Aside({withAside, children, ...props }) {
   return (
     <Box
       ml={[null, null, '10%']}
-      mr={[null, null, withAside ? '10%' : 'auto']}
-      width={[null, null, getWidth]}
+      mr={[null, null, "10%"]}
+      width={[null, null, "30%"]}
       {...props}
     >
       {children}

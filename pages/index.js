@@ -26,7 +26,7 @@ export default function Home() {
   };
   return (
     <Layout>
-      <Container as="section" pt={9} pb={10} variant="grid">
+      <Container as="section" pt={9} pb={11} variant="grid">
         <Box
           sx={{
             gridColumnStart: [null, '1', '2'],

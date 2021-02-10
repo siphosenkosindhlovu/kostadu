@@ -5,21 +5,28 @@ import Avatar from './avatar';
 import { useState } from 'react';
 export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
+  // const openStyles = isOpen ? 
+  //   {
+  //     display: block,
+
+  //   } : {
+  //   opacity: [0, ]
+  // } 
   const navItems = [
-    { href: '/biograpgy', title: 'BIOGRAPGY' },
+    { href: '/bio', title: 'BIOGRAPGY' },
     { href: '/projects', title: 'PROJECTS' },
     { href: '/essays', title: 'ESSAYS' },
-    { href: '/publications', title: 'PUBLICATIONS' },
+    { href: '/featured', title: 'PUBLICATIONS' },
     { href: '/videos', title: 'VIDEOS' },
     { href: '/contact', title: 'CONTACT' },
   ];
   return (
-    <Container>
+    <Container sx={{ zIndex: "10000", position: 'relative' }}>
       <Flex
         as="header"
         justifyContent="space-between"
         px={[0, null, null, null, 9]}
-        py={[6, null, null, null, 9]}
+        py={6}
         sx={{ flexDirection: ['column', null, 'row'] }}
       >
         <Flex
@@ -48,11 +55,12 @@ export default function NavBar() {
           </Button>
         </Flex>
         <Box
+          
           as="navbar"
           flexDirection={['column', null, 'row']}
           alignItems={['flex-start', null, 'center']}
-          pt={[10, 0]}
-          mt={[10, 0]}
+          pt={[10, null, 0]}
+          mt={[10, null, 0]}
           sx={{
             display: [isOpen ? 'flex' : 'none', null, 'flex'],
             width: ['100vw', null, 'auto'],
@@ -61,6 +69,9 @@ export default function NavBar() {
             top: 0,
             left: 0,
             px: 6,
+            '&.animate' : {
+              'display' : 'block'
+            }
           }}
         >
           {navItems.map((navItem, i) => (

@@ -8,14 +8,16 @@ import publications from '../lib/publications';
 export default function Publication() {
   return (
     <Layout>
-      <Container as="section" pt={9}>
+      <Container as="section" pt={9} display={[null, 'flex']}>
         <Main withAside>
           <Heading mb={[8, null, 10]}>
             Find my presence
             <br /> across the web
           </Heading>
         </Main>
-        <Aside></Aside>
+        <Aside withAside width={[null, '40%']} ml={0} mb='-50px'>
+          <Image src="images/coffee.svg" alt="coffee cup"/>
+        </Aside>
       </Container>
       <Box bg="light">
         <Container  py={['120px', null, null, null, '200px']}>

@@ -8,14 +8,16 @@ import { Input, Textarea } from '@rebass/forms';
 export default function Publication() {
   return (
     <Layout>
-      <Container as="section" pt={9}>
+      <Container as="section" pt={9} display={[null, 'flex']}>
         <Main withAside>
           <Heading mb={[8, null, 10]}>
             I turn ideas into
             <br /> established business
           </Heading>
         </Main>
-        <Aside></Aside>
+        <Aside withAside width={[null, '40%']} ml={0}>
+          <Image src="images/coffee.svg" alt="coffee cup"/>
+        </Aside>
       </Container>
       <Box as="section" bg="light">
         <Container>
