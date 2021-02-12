@@ -5,7 +5,7 @@ import NavLink from '../components/links/nav-link';
 import Contacts from '../components/contacts';
 import { Box, Heading, Text, Image, Card, Link, Button, Flex } from 'rebass';
 import { ArrowRight, ArrowLeft, MoreHorizontal } from 'react-feather';
-import { useRef } from 'react';
+import { useRef, useEffect } from 'react';
 import Slider from 'react-slick';
 import essays from '../lib/essays';
 import 'slick-carousel/slick/slick.css';
@@ -14,8 +14,8 @@ import 'slick-carousel/slick/slick-theme.css';
 //import Image from 'next/image'
 
 export default function Home() {
-  console.log(essays);
-  const slider = useRef()
+  let slider = useRef();
+
   const sliderSettings = {
     dots: false,
     arrows: false,
@@ -117,10 +117,10 @@ export default function Home() {
               PROJECTS
             </Heading>
             <Box sx={{ display: [null, null, 'none'] }}>
-              <Button variant="icon-action" mr={2} onClick={slider.current.slickPrev}>
+              <Button variant="icon-action" mr={2} onClick={slider.slickPrev}>
                 <ArrowLeft />
               </Button>
-              <Button variant="icon-action" onClick={slider.current.slickNext}>
+              <Button variant="icon-action" onClick={slider.slickNext}>
                 <ArrowRight />
               </Button>
             </Box>
