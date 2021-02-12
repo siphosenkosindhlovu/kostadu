@@ -97,6 +97,10 @@ export default {
     'icon-action': {
       height: '50px',
       width: '50px',
+      p: 0,
+      display: 'inline-flex',
+      alignItems: 'center',
+      justifyContent: 'center',
       borderRadius: '999px',
       color: 'blue',
       border: 'none',

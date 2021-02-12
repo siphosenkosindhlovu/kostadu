@@ -25,7 +25,7 @@ export default function Home() {
       {
         breakpoint: 768,
         settings: {
-          donts: false,
+          dots: false,
           slidesToShow: 1,
           slidesToScroll: 1,
         },
@@ -116,88 +116,132 @@ export default function Home() {
             <Heading as="h3" variant="subheading">
               PROJECTS
             </Heading>
-            <Box sx={{ display: [null, null, 'none'] }}>
-              <Button variant="icon-action" mr={2} onClick={() => slider.current.slickPrev()}>
+            <Box sx={{ display: [null, 'none'] }}>
+              <Button
+                variant="icon-action"
+                mr={2}
+                onClick={() => slider.current.slickPrev()}
+              >
                 <ArrowLeft />
               </Button>
-              <Button variant="icon-action" onClick={() => slider.current.slickNext()}>
+              <Button
+                variant="icon-action"
+                onClick={() => slider.current.slickNext()}
+              >
                 <ArrowRight />
               </Button>
             </Box>
           </Flex>
-
-          <Slider ref={slider} {...sliderSettings}>
-            <Box
-              sx={{
-                position: 'relative',
-                display: 'inline-block',
-                pr: [null, 2],
-              }}
-            >
+          <Box
+            sx={{
+              '.slick-track': {
+                display: ['flex !important', null, 'block !important'],
+              },
+              '.slick-slide': {
+                height: 'inherit !important',
+                '& > div ': {
+                  height: '100%',
+                  '& >div': {
+                    height: '100%',
+                  },
+                },
+              },
+            }}
+          >
+            <Slider ref={slider} {...sliderSettings}>
               <Box
                 sx={{
-                  backgroundColor: '#08243B',
+                  position: 'relative',
+                  display: 'inline-block',
+                  pr: [null, 2],
                 }}
               >
-                <Image src="images/paymobbanner.svg"></Image>
                 <Box
-                  bg="white"
-                  p={4}
                   sx={{
-                    position: [null, null, 'absolute'],
-                    bottom: 0,
-                    width: ['100%', null, '300px'],
+                    backgroundColor: '#08243B',
+                    height: '100%',
+                    position: 'relative',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    justifyContent: 'space-between',
                   }}
                 >
-                  <Heading variant="subheading" mb={2}>
-                    Paymob
-                  </Heading>
-                  <Text sx={{ opacity: 0.3 }}>
-                    On-land payment infrastructure for the next generation
-                    merchant services.
-                  </Text>
-                  <Box textAlign="right">
-                    <Button variant="icon-link" as={Link} href="#">
-                      <ArrowRight />
-                    </Button>
+                  <Image src="images/paymobbanner.svg"></Image>
+                  <Box
+                    bg="white"
+                    p={4}
+                    sx={{
+                      position: [null, null, 'absolute'],
+                      bottom: 0,
+                      width: ['100%', null, '300px'],
+                      flex: '1',
+                      display: 'flex',
+                      flexDirection: 'column',
+                      justifyContent: 'flex-start',
+                    }}
+                  >
+                    <Heading variant="subheading" mb={2}>
+                      Paymob
+                    </Heading>
+                    <Text sx={{ opacity: 0.3 }}>
+                      On-land payment infrastructure for the next generation
+                      merchant services.
+                    </Text>
+                    <Box textAlign="right" mt="auto" width="100%">
+                      <Button variant="icon-link" as={Link} href="#">
+                        <ArrowRight />
+                      </Button>
+                    </Box>
                   </Box>
                 </Box>
               </Box>
-            </Box>
-            <Box
-              sx={{
-                position: 'relative',
-                display: 'inline-block',
-                pl: [null, 2],
-              }}
-            >
-              <Box>
-                <Image src="images/Slide_03.png"></Image>
+              <Box
+                sx={{
+                  position: 'relative',
+                  display: 'inline-block',
+                  pl: [null, 2],
+                }}
+              >
                 <Box
-                  bg="white"
-                  p={4}
                   sx={{
-                    position: [null, null, 'absolute'],
-                    bottom: 0,
-                    width: ['100%', null, '300px'],
+                    
+                    height: '100%',
+                    position: 'relative',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    justifyContent: 'space-between',
                   }}
                 >
-                  <Heading variant="subheading" mb={2}>
-                    Money Zebra
-                  </Heading>
-                  <Text sx={{ opacity: 0.3 }}>
-                    Transparent auction marketplace for financial services to
-                    access emerging markets
-                  </Text>
-                  <Box textAlign="right">
-                    <Button variant="icon-link" as={Link} href="#">
-                      <ArrowRight />
-                    </Button>
+                  <Image src="images/Slide_03.png"></Image>
+                  <Box
+                    bg="white"
+                    p={4}
+                    sx={{
+                      position: [null, null, 'absolute'],
+                      bottom: 0,
+                      width: ['100%', null, '300px'],
+                      display: 'flex',
+                      flexDirection: 'column',
+                      justifyContent: 'flex-start',
+                    }}
+                  >
+                    <Heading variant="subheading" mb={2}>
+                      Money Zebra
+                    </Heading>
+                    <Text sx={{ opacity: 0.3 }}>
+                      Transparent auction marketplace for financial services to
+                      access emerging markets
+                    </Text>
+                    <Box textAlign="right" mt="auto" width="100%">
+                      <Button variant="icon-link" as={Link} href="#">
+                        <ArrowRight />
+                      </Button>
+                    </Box>
                   </Box>
                 </Box>
               </Box>
-            </Box>
-          </Slider>
+            </Slider>
+          </Box>
         </Container>
       </Box>
       <Container as="section" py={[10, 12]}>
@@ -219,7 +263,7 @@ export default function Home() {
                 borderStyle: 'solid',
                 display: 'flex',
                 flexDirection: 'column',
-                alignItems: 'flex-start'
+                alignItems: 'flex-start',
               }}
             >
               <Text opacity={0.3} mb={6} fontSize={[1, 4]}>
@@ -231,7 +275,7 @@ export default function Home() {
               <Text opacity={0.3}>{excerpt}</Text>
               <Box textAlign="right" mt="auto" pt={4} width="100%">
                 <Button variant="icon-link" as={Link} href="#">
-                  <MoreHorizontal/>
+                  <MoreHorizontal />
                 </Button>
               </Box>
             </Card>

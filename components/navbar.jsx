@@ -90,6 +90,7 @@ export default function NavBar() {
             width: ['100vw', null, 'auto'],
             height: ['100vh', null, 'auto'],
             position: ['fixed', null, 'static'],
+            bg: ['white', null, 'transparent'],
             top: 0,
             left: 0,
             px: 6,
