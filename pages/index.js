@@ -117,10 +117,10 @@ export default function Home() {
               PROJECTS
             </Heading>
             <Box sx={{ display: [null, null, 'none'] }}>
-              <Button variant="icon-action" mr={2} onClick={slider.slickPrev}>
+              <Button variant="icon-action" mr={2} onClick={() => slider.current.slickPrev()}>
                 <ArrowLeft />
               </Button>
-              <Button variant="icon-action" onClick={slider.slickNext}>
+              <Button variant="icon-action" onClick={() => slider.current.slickNext()}>
                 <ArrowRight />
               </Button>
             </Box>
@@ -172,7 +172,7 @@ export default function Home() {
               }}
             >
               <Box>
-                <Image src="images/slide_03.png"></Image>
+                <Image src="images/Slide_03.png"></Image>
                 <Box
                   bg="white"
                   p={4}
