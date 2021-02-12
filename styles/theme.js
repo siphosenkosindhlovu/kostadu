@@ -77,6 +77,35 @@ export default {
       color: 'dark',
       border: 'none',
     },
+    'icon-link': {
+      color: 'blue',
+      height: '50px',
+      width: '50px',
+      p: 0,
+      display: 'inline-flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      borderRadius: '999px',
+      borderColor: 'blue',
+      borderWidth: '2px',
+      borderStyle: 'solid',
+      '&:hover': {
+        color: 'white',
+        bg: 'blue',
+      },
+    },
+    'icon-action': {
+      height: '50px',
+      width: '50px',
+      borderRadius: '999px',
+      color: 'blue',
+      border: 'none',
+      bg: 'white',
+      boxShadow: '10px 15px 20px #00000029',
+      '&:disabled': {
+        color: "#aaa"
+      }
+    },
     primary: {
       height: '50px',
       bg: 'white',
@@ -134,6 +163,9 @@ export default {
       border: 'none',
       borderRadius: 0,
       mb: [4, null, null, null, 6],
+      '&::placeholder': {
+        color: 'white'
+      }
     },
     textarea: {
       fontFamily: 'body',
@@ -145,6 +177,9 @@ export default {
       border: 'none',
       borderRadius: 0,
       mb: [4, null, null, null, 6],
+      '&::placeholder': {
+        color: 'white'
+      }
     },
   },
   variants: {
@@ -169,5 +204,12 @@ export default {
       textDecoration: 'none',
     },
   },
-  styles: {},
+  styles: {
+    root: {
+      a: {
+        color: 'inherit',
+        textDecoration: 'none',
+      }
+    }
+  },
 };

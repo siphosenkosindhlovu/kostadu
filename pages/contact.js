@@ -1,25 +1,34 @@
+import Head from 'next/head';
 import Layout from '../components/layout';
 import Container from '../components/container';
 import Main from '../components/main';
 import Aside from '../components/aside';
+import { ArrowRight } from 'react-feather';
 import Contacts from '../components/contacts';
 import { Box, Heading, Text, Image, Card, Link, Button, Flex } from 'rebass';
 import { Input, Textarea } from '@rebass/forms';
 export default function Publication() {
   return (
     <Layout>
+      <Head>
+        <meta
+          name="description"
+          content="Contact details | Get in touch with Kosta Du"
+        />
+        <title>Contact Kosta Du</title>
+      </Head>
       <Container as="section" pt={9} display={[null, 'flex']}>
         <Main withAside>
-          <Heading mb={[8, null, 10]}>
+          <Heading as="h2" mb={[8, null, 10]}>
             I turn ideas into
             <br /> established business
           </Heading>
         </Main>
         <Aside withAside width={[null, '40%']} ml={0}>
-          <Image src="images/coffee.svg" alt="coffee cup"/>
+          <Image src="images/coffee.svg" alt="coffee cup" />
         </Aside>
       </Container>
-      <Box as="section" bg="light">
+      <Box as="section" bg="lightBlue">
         <Container>
           <Main>
             <Flex
@@ -32,7 +41,7 @@ export default function Publication() {
                 flex={[null, '1 0 37.5%']}
                 ml={[null, 6, null, (1 / 8) * 100 + '%']}
               >
-                <Heading>
+                <Heading as="h1">
                   Get in touch
                   <br /> with me
                 </Heading>
@@ -80,8 +89,12 @@ export default function Publication() {
                       <Text>Zoom</Text>
                     </Box>
                     <Flex alignItems="flex-end">
-                      <Button as={Link} href="https://calendar.x.ai/kostadu/virtual15min" mb={-2}>
-                        Go
+                      <Button
+                        as={Link}
+                        href="https://calendar.x.ai/kostadu/virtual15min"
+                        mb={-2}
+                      >
+                        <ArrowRight />
                       </Button>
                     </Flex>
                   </Flex>
@@ -96,8 +109,12 @@ export default function Publication() {
                       <Text>Zoom</Text>
                     </Box>
                     <Flex alignItems="flex-end">
-                      <Button as={Link} href="https://calendar.x.ai/kostadu/virtual45min" mb={-2}>
-                        Go
+                      <Button
+                        as={Link}
+                        href="https://calendar.x.ai/kostadu/virtual45min"
+                        mb={-2}
+                      >
+                        <ArrowRight />
                       </Button>
                     </Flex>
                   </Flex>
@@ -112,8 +129,12 @@ export default function Publication() {
                       <Text>Zoom</Text>
                     </Box>
                     <Flex alignItems="flex-end">
-                      <Button as={Link} href="https://calendar.x.ai/kostadu/virtual1h" mb={-2}>
-                        Go
+                      <Button
+                        as={Link}
+                        href="https://calendar.x.ai/kostadu/virtual1h"
+                        mb={-2}
+                      >
+                        <ArrowRight />
                       </Button>
                     </Flex>
                   </Flex>
@@ -134,8 +155,8 @@ export default function Publication() {
           >
             I am social
           </Heading>
-          <Flex flexDirection={["column", "row"]} justifyContent="space-around">
-          <Contacts />
+          <Flex flexDirection={['column', 'row']} justifyContent="space-around">
+            <Contacts />
           </Flex>
         </Container>
       </Box>

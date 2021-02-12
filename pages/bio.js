@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import Layout from '../components/layout';
 import Container from '../components/container';
 import { Box, Heading, Text, Image, Card, Link, Button, Flex } from 'rebass';
@@ -22,6 +23,13 @@ for (let i = 0; i < presenting.length; i++) {
 export default function Biograpgy() {
   return (
     <Layout>
+      <Head>
+        <meta
+          name="description"
+          content="Read all about Kosta Du's biography, origin, businesses, experience and projects"
+        />
+        <title>Biography of Fintech Leader and Entrepreneur | Kosta Du</title>
+      </Head>
       <Container as="section" pt={9} pb={10} variant="grid">
         <Box
           sx={{
@@ -29,7 +37,7 @@ export default function Biograpgy() {
             gridColumnEnd: '7',
           }}
         >
-          <Heading>
+          <Heading as="h2">
             <Text as="span" color="blue">
               Kosta Du
             </Text>{' '}
@@ -68,7 +76,7 @@ export default function Biograpgy() {
               pb: theme.space[8],
             })}
           >
-            <Heading variant="subheadingLight">ORIGIN</Heading>
+            <Heading as="h3" variant="subheadingLight">ORIGIN</Heading>
             <Text as="p" variant="heading_2" pb={8}>
               Was born in Siberia, Russia. Grew up in Moscow. Had been living in
               China, Egypt, US, Ireland. Now live in London, Great Britain.
@@ -87,7 +95,7 @@ export default function Biograpgy() {
               pb: theme.space[8],
             })}
           >
-            <Heading variant="subheadingLight">CAREER</Heading>
+            <Heading as="h3" variant="subheadingLight">CAREER</Heading>
             <Text as="p" variant="heading_2" pb={8}>
               Asymmetrical thinker capable of crossing the intellectual and
               practical boundaries of business and technology. Strong
@@ -117,7 +125,7 @@ export default function Biograpgy() {
               2 million dollars revenue
             </Text>
             <Heading
-              as="h2"
+              as="h3"
               variant="subheading"
               mb={[4, null, null, 6]}
               color="purple"
@@ -164,7 +172,7 @@ export default function Biograpgy() {
             }}
           >
             <Heading
-              as="h2"
+              as="h3"
               variant="subheading"
               mb={[4, null, null, 6]}
               color="purple"
@@ -191,7 +199,7 @@ export default function Biograpgy() {
               >
                 <Box sx={{ gridColumnStart: 1, gridColumnEnd: 6, pb: 10 }}>
                   <Heading
-                    as="h2"
+                    as="h3"
                     variant="subheading"
                     mb={[4, null, null, 6]}
                     color="purple"
@@ -236,7 +244,7 @@ export default function Biograpgy() {
                   })}
                 >
                   <Heading
-                    as="h2"
+                    as="h3"
                     variant="subheading"
                     mb={[4, null, null, 6]}
                     color="purple"
@@ -264,7 +272,7 @@ export default function Biograpgy() {
         </Container>
       </Box>
 
-      <Container pt={[10, null, 10]} pb={[5]}>
+      <Container pt={[10, null, 10]} pb={[5]} sx={{display: ['none', null ,'block']}}>
         <Heading as="h2" textAlign="center" mb={[10, null, null, 11]}>
           My presenting
         </Heading>
@@ -274,7 +282,11 @@ export default function Biograpgy() {
               return (
                 <Flex mb={[5, null, 10]}>
                   {current.map((presenting, j) => (
-                    <PresentationCard mr={[null, j % 2 == 0 ? '8px' : 0]} ml={[null, j % 2 != 0 ? '8px' : 0]} {...presenting} />
+                    <PresentationCard
+                      mr={[null, j % 2 == 0 ? '8px' : 0]}
+                      ml={[null, j % 2 != 0 ? '8px' : 0]}
+                      {...presenting}
+                    />
                   ))}
                 </Flex>
               );

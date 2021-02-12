@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import Layout from '../components/layout';
 import Container from '../components/container';
 import { Box, Heading, Text, Image, Card, Link, Button, Flex } from 'rebass';
@@ -12,6 +13,10 @@ export default function Projects() {
       right: '0',
       width: '100%',
     }}>
+      <Head>
+        <meta name="description" content="Examples of ongoing Fintech projects provided by Kosta Du including Paymob and Money Zebra | Kostadu.com "/>
+        <title>Examples of Fintech projects, Paymob and Money Zebra | Kostadu.com </title>
+      </Head>
       <Box
         sx={{
           position: [null, null, 'absolute'],
@@ -32,7 +37,7 @@ export default function Projects() {
       </Box>
       <Container as="section" pt={9}>
         <Main>
-          <Heading color="blue" mb={[8, null, 10]}>
+          <Heading as="h1" color="blue" mb={[8, null, 10]}>
             Ongoing Projects
           </Heading>
           <Box mb={[10, null, null, 11]}>
@@ -49,7 +54,7 @@ export default function Projects() {
                   p={[6, null, 8]}
                   sx={{ flexDirection: 'column', flexBasis: '50%' }}
                 >
-                  <Heading variant="heading_2_alt" mb={[5, null, 7]}>
+                  <Heading as="h2" variant="heading_2_alt" mb={[5, null, 7]}>
                     {project.title}
                   </Heading>
                   <Text
@@ -96,7 +101,7 @@ export default function Projects() {
       </Container>
       <Container>
         <Main>
-          <Heading color="blue" mb={[8, null, 10]}>
+          <Heading as="h1" color="blue" mb={[8, null, 10]}>
             My Past Initiatives
           </Heading>
           {projects.past.map((year) => (
@@ -134,7 +139,7 @@ export default function Projects() {
                     p={[6, null, 8]}
                     sx={{ flexDirection: 'column', flexBasis: '50%' }}
                   >
-                    <Heading variant="heading_2_alt" mb={[5, null, 7]}>
+                    <Heading as="h2" variant="heading_2_alt" mb={[5, null, 7]}>
                       {project.title}
                     </Heading>
                     <Text

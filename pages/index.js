@@ -1,13 +1,21 @@
+import Head from 'next/head';
 import Layout from '../components/layout';
 import Container from '../components/container';
 import NavLink from '../components/links/nav-link';
 import Contacts from '../components/contacts';
 import { Box, Heading, Text, Image, Card, Link, Button, Flex } from 'rebass';
+import { ArrowRight, ArrowLeft, MoreHorizontal } from 'react-feather';
+import { useRef } from 'react';
 import Slider from 'react-slick';
+import essays from '../lib/essays';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+
 //import Image from 'next/image'
+
 export default function Home() {
+  console.log(essays);
+  const slider = useRef()
   const sliderSettings = {
     dots: false,
     arrows: false,
@@ -26,6 +34,13 @@ export default function Home() {
   };
   return (
     <Layout>
+      <Head>
+        <meta
+          name="description"
+          content="Kosta Du is a Fintech Leader, Speaker and Entrepreneur with extensive experience in business projects"
+        />
+        <title>Kosta Du Fintech Leader. Speaker. Entrepreneur.</title>
+      </Head>
       <Container as="section" pt={9} pb={11} variant="grid">
         <Box
           sx={{
@@ -33,11 +48,11 @@ export default function Home() {
             gridColumnEnd: '7',
           }}
         >
-          <Heading>
+          <Heading as="h1">
             <Text as="span" color="blue">
               Kosta Du
             </Text>{' '}
-            - leader, speaker and{' '}
+            -Fintech leader, speaker and{' '}
             <Text as="span" color="purple">
               entrepreneur
             </Text>
@@ -98,25 +113,20 @@ export default function Home() {
         </Container>
         <Container>
           <Flex mb={4} justifyContent="space-between" alignItems="center">
-            <Heading as="h2" variant="subheading">
+            <Heading as="h3" variant="subheading">
               PROJECTS
             </Heading>
             <Box sx={{ display: [null, null, 'none'] }}>
-              <Button
-                mr={2}
-                sx={{ boxShadow: '10px 15px 20px #00000029', border: 'none' }}
-              >
-                Next
+              <Button variant="icon-action" mr={2} onClick={slider.current.slickPrev}>
+                <ArrowLeft />
               </Button>
-              <Button
-                sx={{ boxShadow: '10px 15px 20px #00000029', border: 'none' }}
-              >
-                Prev
+              <Button variant="icon-action" onClick={slider.current.slickNext}>
+                <ArrowRight />
               </Button>
             </Box>
           </Flex>
 
-          <Slider {...sliderSettings}>
+          <Slider ref={slider} {...sliderSettings}>
             <Box
               sx={{
                 position: 'relative',
@@ -147,8 +157,8 @@ export default function Home() {
                     merchant services.
                   </Text>
                   <Box textAlign="right">
-                    <Button as={Link} href="#">
-                      Go
+                    <Button variant="icon-link" as={Link} href="#">
+                      <ArrowRight />
                     </Button>
                   </Box>
                 </Box>
@@ -180,8 +190,8 @@ export default function Home() {
                     access emerging markets
                   </Text>
                   <Box textAlign="right">
-                    <Button as={Link} href="#">
-                      Go
+                    <Button variant="icon-link" as={Link} href="#">
+                      <ArrowRight />
                     </Button>
                   </Box>
                 </Box>
@@ -191,7 +201,7 @@ export default function Home() {
         </Container>
       </Box>
       <Container as="section" py={[10, 12]}>
-        <Heading as="h2" variant="subheading" mb={8}>
+        <Heading as="h3" variant="subheading" mb={8}>
           LATEST ESSAYS
         </Heading>
         <Box
@@ -200,28 +210,28 @@ export default function Home() {
             gridTemplateColumns: [null, '1fr 1fr', '1fr 1fr 1fr'],
           }}
         >
-          {[1, 2, 3, 4, 5, 6].map((_) => (
+          {essays.map(({ date, title, excerpt }, i) => (
             <Card
+              key={i}
               sx={{
                 borderColor: 'purple',
                 borderWidth: '1px',
                 borderStyle: 'solid',
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'flex-start'
               }}
             >
               <Text opacity={0.3} mb={6} fontSize={[1, 4]}>
-                15 December
+                {date}
               </Text>
-              <Heading variant="heading_2" color="blue" mb={6}>
-                Insight of FinTech in Future
+              <Heading as="h2" variant="heading_2" color="blue" mb={6}>
+                {title}
               </Heading>
-              <Text opacity={0.3}>
-                Technology has become our best friend in recent years. The new
-                and modern techs that improve and update about every single day
-                add to our…
-              </Text>
-              <Box textAlign="right">
-                <Button as={Link} href="#">
-                  Go
+              <Text opacity={0.3}>{excerpt}</Text>
+              <Box textAlign="right" mt="auto" pt={4} width="100%">
+                <Button variant="icon-link" as={Link} href="#">
+                  <MoreHorizontal/>
                 </Button>
               </Box>
             </Card>

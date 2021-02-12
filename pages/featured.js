@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import Layout from '../components/layout';
 import Container from '../components/container';
 import Main from '../components/main';
@@ -8,11 +9,14 @@ import publications from '../lib/publications';
 export default function Publication() {
   return (
     <Layout>
+      <Head>
+        <meta name="description" content="Read about Kosta Du and Paymob Smart POS stories in the news and on the web "/>
+        <title>Kosta Du and Paymob Smart POS in the news and on the web </title>
+      </Head>
       <Container as="section" pt={9} display={[null, 'flex']}>
         <Main withAside>
-          <Heading mb={[8, null, 10]}>
-            Find my presence
-            <br /> across the web
+          <Heading as="h1" mb={[8, null, 10]}>
+          Kosta Du and Paymob in the news and on the web
           </Heading>
         </Main>
         <Aside withAside width={[null, '40%']} ml={0} mb='-50px'>
@@ -37,7 +41,7 @@ export default function Publication() {
                   height="42px"
                 />
                 <Heading
-                  as="h3"
+                  as="h2"
                   color="blue"
                   fontSize={[6, null, null, 7]}
                   mb={[6]}
