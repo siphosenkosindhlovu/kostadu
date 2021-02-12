@@ -15,8 +15,9 @@ const socialLinks = [
 ];
 const Contacts = (props) => (
   <>
-    {socialLinks.map((link) => (
+    {socialLinks.map((link, i) => (
       <Heading
+        key={i}
         as="a"
         href={link.link}
         mb={[8, null, null, null, 10]}
