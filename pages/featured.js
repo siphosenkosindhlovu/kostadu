@@ -20,7 +20,7 @@ export default function Publication() {
           </Heading>
         </Main>
         <Aside withAside width={[null, '40%']} ml={0} mb='-50px'>
-          <Image src="images/coffee.svg" alt="coffee cup"/>
+          <Image src="/images/coffee.svg" alt="coffee cup"/>
         </Aside>
       </Container>
       <Box bg="light">
@@ -36,7 +36,7 @@ export default function Publication() {
             {publications.map((publication) => (
               <Card>
                 <Image
-                  src={'images/' + publication.logo + '.png'}
+                  src={'/images/' + publication.logo + '.png'}
                   mb={[6, null, null, null, 8]}
                   height="42px"
                 />

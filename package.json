@@ -12,6 +12,7 @@
     "@rebass/forms": "^4.0.6",
     "@rebass/layout": "^4.0.6",
     "@rebass/preset": "^4.0.5",
+    "axios": "^0.21.1",
     "date-fns": "^2.17.0",
     "emotion-theming": "^11.0.0",
     "next": "10.0.5",

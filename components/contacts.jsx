@@ -2,15 +2,15 @@ import { Box, Heading } from 'rebass';
 const socialLinks = [
   {
     name: 'YouTube',
-    link: '#',
+    link: 'https://m.youtube.com/c/KostaDu',
   },
   {
     name: 'LinkedIn',
-    link: '#',
+    link: 'https://linkedin.com/in/kostadu',
   },
   {
     name: 'Telegram',
-    link: '#',
+    link: 'https://t.me/KostaDu',
   },
 ];
 const Contacts = (props) => (

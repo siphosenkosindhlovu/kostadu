@@ -27,9 +27,9 @@ export default function Projects() {
         }}
       >
         <picture>
-          <source media="(min-width: 768px)" srcset="images/hot-air.svg" />
+          <source media="(min-width: 768px)" srcset="/images/hot-air.svg" />
           <Image
-            src="images/hot-air-mobile.svg"
+            src="/images/hot-air-mobile.svg"
             alt="Hot Air Baloon"
             width="100%"
           ></Image>
@@ -70,7 +70,7 @@ export default function Projects() {
                         mr={3}
                         sx={{ display: 'flex', alignItems: 'center' }}
                       >
-                        <Image src="images/link.svg" alt="Link" mr="1" />
+                        <Image src="/images/link.svg" alt="Link" mr="1" />
                         {project.links}
                       </Link>
                     )}
@@ -80,7 +80,7 @@ export default function Projects() {
                         mr={3}
                         sx={{ display: 'flex', alignItems: 'center' }}
                       >
-                        <Image src="images/link.svg" alt="Link" mr="1" />{' '}
+                        <Image src="/images/link.svg" alt="Link" mr="1" />{' '}
                         Presentation
                       </Link>
                     )}

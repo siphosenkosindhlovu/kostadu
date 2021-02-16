@@ -210,6 +210,9 @@ export default {
   },
   styles: {
     root: {
+      body: {
+        scrollBehavior: 'smooth'
+      },
       a: {
         color: 'inherit',
         textDecoration: 'none',

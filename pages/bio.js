@@ -20,7 +20,7 @@ for (let i = 0; i < presenting.length; i++) {
   }
 }
 
-export default function Biograpgy() {
+export default function Biography() {
   return (
     <Layout>
       <Head>

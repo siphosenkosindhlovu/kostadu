@@ -24,9 +24,9 @@ export default function Publication() {
             <br /> established business
           </Heading>
         </Main>
-        <Aside withAside width={[null, '40%']} ml={0}>
+        {/* <Aside withAside width={[null, '40%']} ml={0}>
           <Image src="images/coffee.svg" alt="coffee cup" />
-        </Aside>
+        </Aside> */}
       </Container>
       <Box as="section" bg="lightBlue">
         <Container>
@@ -93,6 +93,8 @@ export default function Publication() {
                         as={Link}
                         href="https://calendar.x.ai/kostadu/virtual15min"
                         mb={-2}
+                        variant="icon-link"
+                        bg="white"
                       >
                         <ArrowRight />
                       </Button>
@@ -113,6 +115,8 @@ export default function Publication() {
                         as={Link}
                         href="https://calendar.x.ai/kostadu/virtual45min"
                         mb={-2}
+                        variant="icon-link"
+                        bg="white"
                       >
                         <ArrowRight />
                       </Button>
@@ -133,6 +137,8 @@ export default function Publication() {
                         as={Link}
                         href="https://calendar.x.ai/kostadu/virtual1h"
                         mb={-2}
+                        variant="icon-link"
+                        bg="white"
                       >
                         <ArrowRight />
                       </Button>

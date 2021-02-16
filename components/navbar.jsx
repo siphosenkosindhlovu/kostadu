@@ -21,16 +21,17 @@ export default function NavBar() {
     exited: { opacity: 0 },
   };
   const navItems = [
-    { href: '/bio', title: 'BIOGRAPGY' },
-    { href: '/projects', title: 'PROJECTS' },
-    { href: '/essays', title: 'ESSAYS' },
-    { href: '/featured', title: 'PUBLICATIONS' },
-    { href: '/videos', title: 'VIDEOS' },
-    { href: '/contact', title: 'CONTACT' },
+    { href: '/bio/', title: 'BIOGRAPHY' },
+    { href: '/projects/', title: 'PROJECTS' },
+    { href: 'https://medium.com/kostadu', title: 'ESSAYS' },
+    { href: '/featured/', title: 'PUBLICATIONS' },
+    { href: '/videos/', title: 'VIDEOS' },
+    { href: '/contact/', title: 'CONTACT' },
   ];
   return (
     <Container sx={{ zIndex: '10000', position: 'relative' }}>
       <Flex
+        id="top"
         as="header"
         justifyContent="space-between"
         px={[0, null, null, null, 9]}
@@ -70,10 +71,10 @@ export default function NavBar() {
               height: 'auto',
               transition: 'transform 0.5s ease',
               transform: `rotate(${isOpen ? '90deg' : '0'})`,
-              '&:hover' : {
+              '&:hover': {
                 backgroundColor: 'transparent',
-                color: 'blue'
-              }
+                color: 'blue',
+              },
             }}
             onClick={() => setIsOpen(!isOpen)}
           >
@@ -106,9 +107,9 @@ export default function NavBar() {
               mr={0}
               ml={[0, null, 6]}
               sx={{
-                '&:last-child' :{
-                  mr: '0'
-                }
+                '&:last-child': {
+                  mr: '0',
+                },
               }}
             >
               {navItem.title}

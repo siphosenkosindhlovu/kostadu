@@ -6,16 +6,36 @@ import Contacts from '../components/contacts';
 import { Box, Heading, Text, Image, Card, Link, Button, Flex } from 'rebass';
 import { ArrowRight, ArrowLeft, MoreHorizontal } from 'react-feather';
 import { useRef, useEffect } from 'react';
+import { format, parseISO } from 'date-fns';
 import Slider from 'react-slick';
-import essays from '../lib/essays';
+import essays, { getMediumPosts } from '../lib/essays';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
 //import Image from 'next/image'
-
-export default function Home() {
+export async function getStaticProps() {
+  const data = await getMediumPosts();
+  const posts = data.items
+    .map((post) => {
+      let content = post.description;
+      const regex = /<p>(.*?)<\/p>/;
+      const corresp = regex.exec(content);
+      const firstParagraph = corresp ? corresp[0] : '';
+      return {
+        ...post,
+        pubDate: format(parseISO(post.pubDate), 'dd MMMM '),
+        content: firstParagraph,
+      };
+    })
+    .slice(0, 6);
+  return {
+    props: {
+      posts,
+    },
+  };
+}
+export default function Home(props) {
   let slider = useRef();
-
   const sliderSettings = {
     dots: false,
     arrows: false,
@@ -91,7 +111,7 @@ export default function Home() {
               technologies. I keen to do project management and execution
               worldwide.
             </Text>
-            <NavLink href={'/biograpgy'}>READ BIOGRAPGHY</NavLink>
+            <NavLink href={'/bio/'}>READ BIOGRAPHY</NavLink>
           </Box>
           <Box
             sx={{
@@ -166,7 +186,7 @@ export default function Home() {
                     justifyContent: 'space-between',
                   }}
                 >
-                  <Image src="images/paymobbanner.svg"></Image>
+                  <Image src="/images/paymobbanner.svg"></Image>
                   <Box
                     bg="white"
                     p={4}
@@ -204,7 +224,6 @@ export default function Home() {
               >
                 <Box
                   sx={{
-                    
                     height: '100%',
                     position: 'relative',
                     display: 'flex',
@@ -212,7 +231,7 @@ export default function Home() {
                     justifyContent: 'space-between',
                   }}
                 >
-                  <Image src="images/Slide_03.png"></Image>
+                  <Image src="/images/Slide_03.png"></Image>
                   <Box
                     bg="white"
                     p={4}
@@ -254,7 +273,7 @@ export default function Home() {
             gridTemplateColumns: [null, '1fr 1fr', '1fr 1fr 1fr'],
           }}
         >
-          {essays.map(({ date, title, excerpt }, i) => (
+          {props.posts.map(({ pubDate, title, content, link }, i) => (
             <Card
               key={i}
               sx={{
@@ -267,14 +286,17 @@ export default function Home() {
               }}
             >
               <Text opacity={0.3} mb={6} fontSize={[1, 4]}>
-                {date}
+                {(pubDate)}
               </Text>
               <Heading as="h2" variant="heading_2" color="blue" mb={6}>
                 {title}
               </Heading>
-              <Text opacity={0.3}>{excerpt}</Text>
+              <Text
+                opacity={0.3}
+                dangerouslySetInnerHTML={{ __html: content }}
+              />
               <Box textAlign="right" mt="auto" pt={4} width="100%">
-                <Button variant="icon-link" as={Link} href="#">
+                <Button variant="icon-link" as={Link} href={link}>
                   <MoreHorizontal />
                 </Button>
               </Box>
@@ -329,7 +351,7 @@ export default function Home() {
                 promise to give the best advice.
               </Text>
 
-              <NavLink href={'/biograpgy'}>GO TO CONTACTS</NavLink>
+              <NavLink href={'/contact/'}>GO TO CONTACTS</NavLink>
             </Box>
           </Box>
 
