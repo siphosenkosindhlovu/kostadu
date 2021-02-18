@@ -23,7 +23,7 @@ export default function NavBar() {
   const navItems = [
     { href: '/bio/', title: 'BIOGRAPHY' },
     { href: '/projects/', title: 'PROJECTS' },
-    { href: 'https://medium.com/kostadu', title: 'ESSAYS' },
+    { href: 'https://kostadu.medium.com/', title: 'ESSAYS' },
     { href: '/featured/', title: 'PUBLICATIONS' },
     { href: '/videos/', title: 'VIDEOS' },
     { href: '/contact/', title: 'CONTACT' },
