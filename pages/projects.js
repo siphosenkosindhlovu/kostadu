@@ -145,9 +145,8 @@ export default function Projects() {
                     <Text
                       variant="body"
                       sx={{ opacity: 0.3, maxWidth: '40ch', pb: 4 }}
-                    >
-                      {project.desc}
-                    </Text>
+                      dangerouslySetInnerHTML={{__html: project.desc }}
+                    />
                     <Flex mt="auto">
                       {project.links && (
                         <Link
@@ -155,7 +154,7 @@ export default function Projects() {
                           mr={3}
                           sx={{ display: 'flex', alignItems: 'center' }}
                         >
-                          <Image src="images/link.svg" alt="Link" mr="1" />
+                          <Image src="/images/link.svg" alt="Link" mr="1" />
                           {project.links}
                         </Link>
                       )}
@@ -165,7 +164,7 @@ export default function Projects() {
                           mr={3}
                           sx={{ display: 'flex', alignItems: 'center' }}
                         >
-                          <Image src="images/link.svg" alt="Link" mr="1" />{' '}
+                          <Image src="/images/link.svg" alt="Link" mr="1" />{' '}
                           Presentation
                         </Link>
                       )}

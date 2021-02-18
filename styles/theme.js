@@ -211,7 +211,8 @@ export default {
   styles: {
     root: {
       body: {
-        scrollBehavior: 'smooth'
+        scrollBehavior: 'smooth',
+        bg: 'black'
       },
       a: {
         color: 'inherit',

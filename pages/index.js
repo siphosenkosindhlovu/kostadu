@@ -208,7 +208,7 @@ export default function Home(props) {
                       merchant services.
                     </Text>
                     <Box textAlign="right" mt="auto" width="100%">
-                      <Button variant="icon-link" as={Link} href="#">
+                      <Button variant="icon-link" as={Link} href="https://paymobtech.com">
                         <ArrowRight />
                       </Button>
                     </Box>
@@ -252,7 +252,7 @@ export default function Home(props) {
                       access emerging markets
                     </Text>
                     <Box textAlign="right" mt="auto" width="100%">
-                      <Button variant="icon-link" as={Link} href="#">
+                      <Button variant="icon-link" as={Link} href="https://zebra.money">
                         <ArrowRight />
                       </Button>
                     </Box>
@@ -293,6 +293,21 @@ export default function Home(props) {
               </Heading>
               <Text
                 opacity={0.3}
+                sx={{
+                  maxHeight: "5.75rem",
+                  overflow: "hidden",
+                  textOverflow: "ellipsis",
+                  position: 'relative',
+                  '&:after' :{
+                    position: 'absolute',
+                    content: '"  "',
+                    display: 'block',
+                    width: '2rem',
+                    height: '1rem',
+                    bottom: 0,
+                    right: 0
+                  }
+                }}
                 dangerouslySetInnerHTML={{ __html: content }}
               />
               <Box textAlign="right" mt="auto" pt={4} width="100%">

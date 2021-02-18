@@ -71,6 +71,7 @@ export default function NavBar() {
               height: 'auto',
               transition: 'transform 0.5s ease',
               transform: `rotate(${isOpen ? '90deg' : '0'})`,
+              backgroundColor: 'transparent',
               '&:hover': {
                 backgroundColor: 'transparent',
                 color: 'blue',
