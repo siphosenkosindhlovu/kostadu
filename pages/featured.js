@@ -26,7 +26,7 @@ export default function Publication() {
           <Image src="/images/coffee.svg" alt="coffee cup" />
         </Aside>
       </Container>
-      <Box bg="light">
+      <Box bg="lightBlue">
         <Container py={['120px', null, null, null, '200px']}>
           <Main
             sx={{

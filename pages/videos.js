@@ -24,7 +24,6 @@ export async function getStaticProps() {
 }
 
 export default function Publication({ videoList }) {
-  console.log(videoList);
   return (
     <Layout>
       <Head>
@@ -41,7 +40,7 @@ export default function Publication({ videoList }) {
           </Heading>
         </Main>
       </Container>
-      <Box as="section" bg="light" pt={10} pb={5}>
+      <Box as="section" bg="lightBlue" pt={10} pb={5}>
         <Container>
           <Main>
             <Box

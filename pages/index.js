@@ -35,7 +35,7 @@ export async function getStaticProps() {
   };
 }
 export default function Home(props) {
-  let slider = useRef();
+  const slider = useRef();
   const sliderSettings = {
     dots: false,
     arrows: false,
@@ -88,18 +88,19 @@ export default function Home(props) {
         ></Box>
       </Container>
       <Box bg="lightBlue" pb={[5, null, 11]}>
-        <Container variant="grid" mb={6}>
+        <Container variant="grid">
           <Box
+            py={8}
+            pt={[null, 0]}
             sx={{
               gridColumnStart: [null, '1', '2'],
               gridColumnEnd: '6',
-              pb: 8,
             }}
           >
             <Heading
               as="h2"
               color="blue"
-              sx={{ transform: 'translateY(-50%)' }}
+              sx={{ transform: [null, 'translateY(-50%)'] }}
             >
               I launch businesses and projects.
             </Heading>
@@ -114,6 +115,7 @@ export default function Home(props) {
             <NavLink href={'/bio/'}>READ BIOGRAPHY</NavLink>
           </Box>
           <Box
+            mb={[8, null, null, '-10%', '-50%']}
             sx={{
               gridColumnStart: [null, '7', '8'],
               gridColumnEnd: '11',
@@ -131,7 +133,7 @@ export default function Home(props) {
             ></Image>
           </Box>
         </Container>
-        <Container>
+        <Container mb={8}>
           <Flex mb={4} justifyContent="space-between" alignItems="center">
             <Heading as="h3" variant="subheading">
               PROJECTS
@@ -208,7 +210,11 @@ export default function Home(props) {
                       merchant services.
                     </Text>
                     <Box textAlign="right" mt="auto" width="100%">
-                      <Button variant="icon-link" as={Link} href="https://paymobtech.com">
+                      <Button
+                        variant="icon-link"
+                        as={Link}
+                        href="https://paymobtech.com"
+                      >
                         <ArrowRight />
                       </Button>
                     </Box>
@@ -252,7 +258,11 @@ export default function Home(props) {
                       access emerging markets
                     </Text>
                     <Box textAlign="right" mt="auto" width="100%">
-                      <Button variant="icon-link" as={Link} href="https://zebra.money">
+                      <Button
+                        variant="icon-link"
+                        as={Link}
+                        href="https://zebra.money"
+                      >
                         <ArrowRight />
                       </Button>
                     </Box>
@@ -286,7 +296,7 @@ export default function Home(props) {
               }}
             >
               <Text opacity={0.3} mb={6} fontSize={[1, 4]}>
-                {(pubDate)}
+                {pubDate}
               </Text>
               <Heading as="h2" variant="heading_2" color="blue" mb={6}>
                 {title}
@@ -294,19 +304,23 @@ export default function Home(props) {
               <Text
                 opacity={0.3}
                 sx={{
-                  maxHeight: "5.75rem",
-                  overflow: "hidden",
-                  textOverflow: "ellipsis",
-                  position: 'relative',
-                  '&:after' :{
-                    position: 'absolute',
-                    content: '"  "',
-                    display: 'block',
-                    width: '2rem',
-                    height: '1rem',
-                    bottom: 0,
-                    right: 0
-                  }
+                  p: {
+                    maxHeight: '5.75rem',
+                    overflow: 'hidden',
+                    textOverflow: 'ellipsis',
+                    position: 'relative',
+                    '&:after': {
+                      position: 'absolute',
+                      content: '"  "',
+                      display: 'block',
+                      width: '70%',
+                      height: '1rem',
+                      bottom: 0,
+                      right: 0,
+                      background:
+                        'linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 50%)',
+                    },
+                  },
                 }}
                 dangerouslySetInnerHTML={{ __html: content }}
               />
@@ -356,7 +370,7 @@ export default function Home(props) {
               <Heading
                 mb={8}
                 pb={[0, null, null, null, 2]}
-                fontSize={[8, 10]}
+                fontSize={[8,null, null, 10]}
                 color="blue"
               >
                 Do you think, I can do more for you?

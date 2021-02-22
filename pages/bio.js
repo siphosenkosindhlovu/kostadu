@@ -220,6 +220,7 @@ export default function Biography() {
                       opacity: 0.4,
                       fontSize: [2, null, 4],
                       mb: [4, null, 7],
+                      lineHeight: 1.75
                     }}
                   >
                     {name}

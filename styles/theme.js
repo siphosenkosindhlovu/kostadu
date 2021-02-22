@@ -1,5 +1,5 @@
 export default {
-  breakpoints: ['768px', '1024px', '1200px', '1440px', '1640px'],
+  breakpoints: ['768px', '1024px', '1200px', '1640px'],
   fontSizes: [
     '14px',
     '15px',
@@ -41,11 +41,12 @@ export default {
     display: { fontSize: [9, null, null, null, 8] },
     heading: {
       fontFamily: 'heading',
-      fontSize: [8, null, null, 9],
+      fontSize: [8, null, null, null, 9],
     },
     heading_2: {
       fontFamily: 'heading',
-      fontSize: [6, null, null, 8],
+      fontSize: [6, null, null, null, 8],
+      lineHeight: 1.45,
     },
     heading_3: {
       fontFamily: 'heading',
@@ -53,7 +54,7 @@ export default {
     },
     heading_2_alt: {
       fontFamily: 'body',
-      fontSize: [6, null, null, 8],
+      fontSize: [6, null, null, null, 8],
     },
     subheading: {
       fontFamily: 'body',
@@ -107,8 +108,8 @@ export default {
       bg: 'white',
       boxShadow: '10px 15px 20px #00000029',
       '&:disabled': {
-        color: "#aaa"
-      }
+        color: '#aaa',
+      },
     },
     primary: {
       height: '50px',
@@ -151,9 +152,9 @@ export default {
       border: 'none',
       borderRadius: '999px',
       color: 'blue',
-      '&:disabled' :{
-        color: 'gray'
-      }
+      '&:disabled': {
+        color: 'gray',
+      },
     },
   },
   forms: {
@@ -168,8 +169,8 @@ export default {
       borderRadius: 0,
       mb: [4, null, null, null, 6],
       '&::placeholder': {
-        color: 'white'
-      }
+        color: 'white',
+      },
     },
     textarea: {
       fontFamily: 'body',
@@ -182,8 +183,8 @@ export default {
       borderRadius: 0,
       mb: [4, null, null, null, 6],
       '&::placeholder': {
-        color: 'white'
-      }
+        color: 'white',
+      },
     },
   },
   variants: {
@@ -212,12 +213,12 @@ export default {
     root: {
       body: {
         scrollBehavior: 'smooth',
-        bg: 'black'
+        bg: 'black',
       },
       a: {
         color: 'inherit',
         textDecoration: 'none',
-      }
-    }
+      },
+    },
   },
 };

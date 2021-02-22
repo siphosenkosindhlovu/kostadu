@@ -34,7 +34,7 @@ export default function NavBar() {
         id="top"
         as="header"
         justifyContent="space-between"
-        px={[0, null, null, null, 9]}
+        px={0}
         py={6}
         sx={{ flexDirection: ['column', null, 'row'] }}
       >
