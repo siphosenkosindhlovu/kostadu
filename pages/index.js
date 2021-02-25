@@ -324,7 +324,7 @@ export default function Home(props) {
                 }}
                 dangerouslySetInnerHTML={{ __html: content }}
               />
-              <Box textAlign="right" mt="auto" pt={4} width="100%">
+              <Box textAlign="right" mt="auto" width="100%">
                 <Button variant="icon-link" as={Link} href={link}>
                   <MoreHorizontal />
                 </Button>

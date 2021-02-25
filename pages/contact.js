@@ -24,9 +24,9 @@ export default function Publication() {
             <br /> established business
           </Heading>
         </Main>
-        {/* <Aside withAside width={[null, '40%']} ml={0}>
-          <Image src="images/coffee.svg" alt="coffee cup" />
-        </Aside> */}
+        <Aside withAside width={[null, '40%']} ml={0}>
+          <Image src="/images/lookout.svg" alt="coffee cup" />
+        </Aside>
       </Container>
       <Box as="section" bg="lightBlue">
         <Container>

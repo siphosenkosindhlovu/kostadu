@@ -56,7 +56,7 @@ export default function Biography() {
           }}
         >
           <Image
-            src="/images/experienceimage@2x.png"
+            src="/images/contactimage@2x.png"
             alt="Portrait of Kosta Du"
             width="100%"
             height="auto"
@@ -144,7 +144,7 @@ export default function Biography() {
             sx={(theme) => ({
               gridColumnStart: [null, '1', '2'],
               gridColumnEnd: '7',
-              pb: theme.space[8],
+              pb: 8,
             })}
           >
             <Text as="p" variant="heading_2" pb={8}>
@@ -277,7 +277,8 @@ export default function Biography() {
         <Heading as="h2" textAlign="center" mb={[10, null, null, 11]}>
           My presenting
         </Heading>
-        <Box>
+        
+        <Main>
           {formattedPresenting.map((current, i) => {
             if (i % 2 == 0) {
               return (
@@ -310,7 +311,7 @@ export default function Biography() {
                 <PresentationCard {...presentation} />
               </Flex>
             ))} */}
-        </Box>
+        </Main>
       </Container>
     </Layout>
   );
