@@ -23,7 +23,7 @@ export default function NavBar() {
   const navItems = [
     { href: '/bio/', title: 'BIOGRAPHY' },
     { href: '/projects/', title: 'PROJECTS' },
-    { href: 'https://kostadu.medium.com/', title: 'ESSAYS' },
+    { href: 'https://kostadu.medium.com/', title: 'ESSAYS',  target: "_blank", rel: "noopener noreferrer" },
     { href: '/featured/', title: 'PUBLICATIONS' },
     { href: '/videos/', title: 'VIDEOS' },
     { href: '/contact/', title: 'CONTACT' },
@@ -100,10 +100,10 @@ export default function NavBar() {
             zIndex: '1110',
           }}
         >
-          {navItems.map((navItem, i) => (
+          {navItems.map(({href, title, ...rest}, i) => (
             <NavLink
               key={i}
-              href={navItem.href}
+              href={href}
               fontSize={[8, null, 4]}
               mr={0}
               ml={[0, null, 6]}
@@ -112,8 +112,9 @@ export default function NavBar() {
                   mr: '0',
                 },
               }}
+              {...rest}
             >
-              {navItem.title}
+              {title}
             </NavLink>
           ))}
         </Box>

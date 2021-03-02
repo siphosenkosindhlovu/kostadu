@@ -36,7 +36,7 @@ export default function Publication() {
             {publications.map((publication) => {
               if (publication.url) {
                 return (
-                  <Card as="a" href={publication.url} color="unset" sx={{ textDecoration: "unset"}}>
+                  <Card as="a" target="_blank" rel="noopener noreferrer" href={publication.url} color="unset" sx={{ textDecoration: "unset"}}>
                     <Image
                       src={'/images/' + publication.logo + '.png'}
                       mb={[6, null, null, null, 8]}

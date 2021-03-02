@@ -41,11 +41,13 @@ export default function Biography() {
             <Text as="span" color="blue">
               Kosta Du
             </Text>{' '}
-            - leader, speaker and{' '}
-            <Text as="span" color="purple">
-              entrepreneur
+            <Text>
+              Fintech leader, speaker and{' '}
+              <Text as="span" color="blue">
+                entrepreneur
+              </Text>
+              .
             </Text>
-            .
           </Heading>
         </Box>
         <Box

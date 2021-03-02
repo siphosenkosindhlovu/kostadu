@@ -72,11 +72,13 @@ export default function Home(props) {
             <Text as="span" color="blue">
               Kosta Du
             </Text>{' '}
-            -Fintech leader, speaker and{' '}
-            <Text as="span" color="purple">
-              entrepreneur
+            <Text>
+              Fintech leader, speaker and{' '}
+              <Text as="span" color="blue">
+                entrepreneur
+              </Text>
+              .
             </Text>
-            .
           </Heading>
         </Box>
         <Box
@@ -370,7 +372,7 @@ export default function Home(props) {
               <Heading
                 mb={8}
                 pb={[0, null, null, null, 2]}
-                fontSize={[8,null, null, 10]}
+                fontSize={[8, null, null, 10]}
                 color="blue"
               >
                 Do you think, I can do more for you?
