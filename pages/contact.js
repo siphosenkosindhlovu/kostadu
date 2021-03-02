@@ -47,25 +47,25 @@ export default function Publication() {
                 </Heading>
               </Box>
               <Box flex={[null, '1 0 50%']}>
-                <Box as="form">
+                <Box as="form" action="https://formspree.io/f/mjvpqggp" method="POST">
                   <Flex flexDirection={['column', 'row']}>
                     <Input
-                      name="Name"
+                      name="name"
                       placeholder="Name"
                       width={['75%', '100%']}
                       flex={[null, '0 1 50%']}
                       mr={[null, '15px']}
                     />
                     <Input
-                      name="Email"
+                      name="_replyto"
                       placeholder="Email"
                       width={['75%', '100%']}
                       flex={[null, '0 1 50%']}
                     />
                   </Flex>
-                  <Textarea placeholder="Message" rows="5"></Textarea>
+                  <Textarea name="message" placeholder="Message" rows="5"></Textarea>
                   <Box textAlign="right">
-                    <Button variant="navlink">SEND</Button>
+                    <Button type="submit" variant="navlink">SEND</Button>
                   </Box>
                 </Box>
               </Box>
